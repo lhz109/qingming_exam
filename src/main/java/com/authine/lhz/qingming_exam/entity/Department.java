@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "department")
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Department {
     @Id
     @GenericGenerator(name = "snow", strategy = "com.authine.lhz.qingming_exam.config.SnowIdGenerator")
@@ -21,6 +21,7 @@ public class Department {
     @Column
     private String name;
 
-    @ManyToMany(mappedBy = "departments")
+    @ManyToMany
+    @JoinTable(name = "department_worker", joinColumns = @JoinColumn(name = "department_id"), inverseJoinColumns = @JoinColumn(name = "worker_id"))
     private List<Worker> workers;
 }

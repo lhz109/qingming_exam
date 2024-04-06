@@ -1,6 +1,4 @@
 package com.authine.lhz.qingming_exam.controller;
-
-import com.authine.lhz.qingming_exam.entity.Worker;
 import com.authine.lhz.qingming_exam.dto.WorkerDto;
 import com.authine.lhz.qingming_exam.service.WorkerService;
 import org.springframework.web.bind.annotation.*;
@@ -27,13 +25,13 @@ public class WorkerController {
     }
 
     @PostMapping("/create")
-    public String create(@RequestBody Worker worker) {
-        return service.create(worker);
+    public String create(@RequestBody WorkerDto worker) {
+        return service.create(worker.toWorker());
     }
 
     @PostMapping("/update")
-    public boolean update(@RequestBody Worker worker) {
-        return service.update(worker);
+    public boolean update(@RequestBody WorkerDto worker) {
+        return service.update(worker.toWorker());
     }
 
     @PostMapping("/delete")

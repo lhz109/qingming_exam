@@ -1,6 +1,4 @@
 package com.authine.lhz.qingming_exam.controller;
-
-import com.authine.lhz.qingming_exam.entity.Role;
 import com.authine.lhz.qingming_exam.dto.RoleDto;
 import com.authine.lhz.qingming_exam.service.RoleService;
 import org.springframework.web.bind.annotation.*;
@@ -27,13 +25,13 @@ public class RoleController {
     }
 
     @PostMapping("/create")
-    public String create(@RequestBody Role role) {
-        return service.create(role);
+    public String create(@RequestBody RoleDto role) {
+        return service.create(role.toRole());
     }
 
     @PostMapping("/update")
-    public boolean update(@RequestBody Role role) {
-        return service.update(role);
+    public boolean update(@RequestBody RoleDto role) {
+        return service.update(role.toRole());
     }
 
     @PostMapping("/delete")

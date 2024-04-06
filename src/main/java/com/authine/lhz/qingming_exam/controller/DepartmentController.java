@@ -1,6 +1,4 @@
 package com.authine.lhz.qingming_exam.controller;
-
-import com.authine.lhz.qingming_exam.entity.Department;
 import com.authine.lhz.qingming_exam.dto.DepartmentDto;
 import com.authine.lhz.qingming_exam.service.DepartmentService;
 import org.springframework.web.bind.annotation.*;
@@ -27,13 +25,13 @@ public class DepartmentController {
     }
 
     @PostMapping("/create")
-    public String create(@RequestBody Department department) {
-        return service.create(department);
+    public String create(@RequestBody DepartmentDto department) {
+        return service.create(department.toDepartment());
     }
 
     @PostMapping("/update")
-    public boolean update(@RequestBody Department department) {
-        return service.update(department);
+    public boolean update(@RequestBody DepartmentDto department) {
+        return service.update(department.toDepartment());
     }
 
     @PostMapping("/delete")

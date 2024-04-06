@@ -1,0 +1,271 @@
+{
+  "info": {
+    "_postman_id": "5241a97a-42c0-4d89-9a07-a37ce86fde67",
+    "name": "清明节作业",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26557383"
+  },
+  "item": [
+    {
+      "name": "获取所有worker",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/worker/list",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "worker",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "创建worker",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"测试\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/worker/create",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "worker",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "修改worker",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"1776284244738445312\",\r\n    \"name\": \"测试111\",\r\n    \"roles\": [],\r\n    \"departments\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/worker/update",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "worker",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "根据id获取worker",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/worker?id=1776284244738445312",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "worker"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "1776284244738445312"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "删除worker",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/worker/delete?id=1776284244738445312",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "worker",
+            "delete"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "1776284244738445312"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取所有的department",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "获取所有的role",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "根据id获取role",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "根据id获取department",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "创建role",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "创建department",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "修改role",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "修改department",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "删除role",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "删除department",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "批量新增",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "批量修改",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/worker/update/list",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "worker",
+            "update",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "批量删除",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"1776549580909973504\",\r\n    \"1776550908558184448\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/worker/delete/list",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "worker",
+            "delete",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
