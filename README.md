@@ -11,4 +11,5 @@
 运行准备：
 1.在数据库中运行sql文件
 2.修改yml配置：mysql、redis
+3.运行postman的json文件，加载测试
 
