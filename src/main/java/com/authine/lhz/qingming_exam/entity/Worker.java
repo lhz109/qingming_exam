@@ -8,8 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 
 //多对多CRUD策略：
-//新增：新增数据，新增表关系（根据id）
-//修改：先删除再新增（根据id）
+//新增或者修改：1.先删除再新增 2.只会删除和新增:本表和多对多表
 //删除：先删除数据，再删除表关系
 @Data
 @Entity
